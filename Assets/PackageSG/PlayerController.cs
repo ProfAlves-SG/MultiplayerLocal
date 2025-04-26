@@ -13,12 +13,18 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody rb;
 
-    void Update()
-    {
-        float move = Input.GetAxis(horizontalInput);
-        float turn = Input.GetAxis(verticalInput);
+    public float move;
+    public float turn;
 
-        Vector3 movement = transform.forward * move * speed * Time.deltaTime;
+    void Update()
+    {   
+        move = Input.GetAxis(verticalInput);
+        turn = Input.GetAxis(horizontalInput);
+    }
+
+    private void FixedUpdate()
+    {
+        Vector3 movement = transform.forward * move * speed;
         transform.Rotate(0, turn * rotationSpeed * Time.deltaTime, 0);
         rb.velocity = new Vector3(movement.x, rb.velocity.y, movement.z);
     }

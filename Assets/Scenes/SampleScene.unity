@@ -463,6 +463,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61069bd882b047c4cb10ed5dcd8d97d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalInput: HorizontalP1
+  verticalInput: VerticalP1
+  speed: 5
+  rotationSpeed: 125
+  rb: {fileID: 106638939}
+  move: 0
+  turn: 0
 --- !u!54 &106638939
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -488,7 +495,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1001 &221026283
 PrefabInstance:
@@ -912,6 +919,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61069bd882b047c4cb10ed5dcd8d97d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontalInput: HorizontalP2
+  verticalInput: VerticalP2
+  speed: 5
+  rotationSpeed: 125
+  rb: {fileID: 703413958}
+  move: 0
+  turn: 0
 --- !u!54 &703413958
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -937,7 +951,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &703413959
 CapsuleCollider:
