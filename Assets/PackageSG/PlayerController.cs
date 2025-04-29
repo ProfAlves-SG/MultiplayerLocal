@@ -17,8 +17,6 @@ public class PlayerController : MonoBehaviour
     public float move;
     public float turn;
     public int score;
-
-    public Text myScoreTxt;
     
     void Update()
     {   
@@ -35,11 +33,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Coin"))
-        {
+       if(collision.gameObject.CompareTag("Coin"))
+       {
             score++;
-            myScoreTxt.text = score.ToString();
             Destroy(collision.gameObject);
-        }
+       }
     }
 }
