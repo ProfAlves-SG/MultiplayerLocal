@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
@@ -17,6 +16,8 @@ public class PlayerController : MonoBehaviour
     public float move;
     public float turn;
     public int score;
+
+    public Text myScoreTxt;
     
     void Update()
     {   
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
        if(collision.gameObject.CompareTag("Coin"))
        {
             score++;
+            myScoreTxt.text = score.ToString();
             Destroy(collision.gameObject);
        }
     }
