@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    // GD1 QUA
+
     public string horizontalInput = "Horizontal";
     public string verticalInput = "Vertical";
 
